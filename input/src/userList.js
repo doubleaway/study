@@ -1,7 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 function User({users,onRemove,onToggle}){
     const {username,email,id,active}=users;
+    //[], 첫화면 렌더링 될때 실행
+    // useEffect(()=>{
+    //     console.log('컴포넌트가 화면에 나타남');
+    //     //컴포넌트가 마운트 되릿 추가 작업
+    //     // 1. props로 받은값을 state값을 수정 2. rest api 3. d3 video.js 라이브러리 4. setInterval, setTimeout,
+    //
+    //     return ()=>{
+    //         //unmount 1. clearIntaval, clearTimeOut
+    //         //2. 라이브러리 인스턴스 제거
+    //         //뒷정리 함수
+    //         console.log("컴포넌트가 화면에서 사라짐")
+    //     }
+    // },[])
+
+    //특정변수 users, user이 없데이트 될때마다 호출 return 값은 바뀌기전것이 먼저 호출
+    useEffect(()=>{
+        console.log(users);
+        return()=>{
+            console.log('user 값이 바뀌기전:');
+            console.log(users);
+        }
+    },[users]);
+
   return(
       <div>
         <b onClick={()=>{onToggle(id)}}
