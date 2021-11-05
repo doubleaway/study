@@ -1,10 +1,16 @@
 import React from "react";
 
-function User({users,onRemove}){
-    const {username,email,id}=users;
+function User({users,onRemove,onToggle}){
+    const {username,email,id,active}=users;
   return(
       <div>
-        <b>
+        <b onClick={()=>{onToggle(id)}}
+            style={
+                {
+                    color:active?'green' : 'black',
+                    cursor: 'pointer'
+                }}
+        >
             {username}
         </b>
         <span>
@@ -16,7 +22,7 @@ function User({users,onRemove}){
   )
 }
 
-function UserList({users,onRemove}){
+function UserList({users,onRemove,onToggle}){
 
 //    하나하나 렌더링
     return(
@@ -54,7 +60,7 @@ function UserList({users,onRemove}){
             {/*내장함수 map사용*/}
             {
                 users.map(
-                    user=>(<User onRemove={onRemove} key={user.id} users={user}/>
+                    user=>(<User onRemove={onRemove} onToggle={onToggle} key={user.id} users={user}/>
                     )
                 )
             }

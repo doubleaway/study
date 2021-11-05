@@ -54,23 +54,33 @@ function App() {
     setUsers(users.filter(user=>user.id!==id));
   };
 
-
+  //map의 다른 사용법 배열에 있는 특정아이템만 업데이트할때도 사용
+const onToggle=id=>{
+    setUsers(users.map(
+        user=>user.id==id
+        ?{...user,active:!user.active}
+            :user
+    ))
+}
 
   const [users,setUsers]=useState([
     {
       id:1,
       username:'veloper',
-      email:'djfekjfkaeljfkejke@naver.com'
+      email:'djfekjfkaeljfkejke@naver.com',
+      active:true
     },
     {
       id:2,
       username:'teste',
-      email:'fekjdkfjekj@naver.com'
+      email:'fekjdkfjekj@naver.com',
+      active:false
     },
     {
       id:3,
       username:'simon',
-      email:'qlqp;oprewjf@naver.com'
+      email:'qlqp;oprewjf@naver.com',
+      active:false
     },
   ]);
   return (
@@ -81,7 +91,7 @@ function App() {
             onChange={onChange}
             onCreate={onCreate}
         />
-        <UserList users={users} onRemove={onRemove}/>
+        <UserList users={users} onRemove={onRemove} onToggle={onToggle}/>
         </>
   );
 }
