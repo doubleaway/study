@@ -17,13 +17,13 @@ function User({users,onRemove,onToggle}){
     // },[])
 
     //특정변수 users, user이 없데이트 될때마다 호출 return 값은 바뀌기전것이 먼저 호출
-    useEffect(()=>{
-        console.log(users);
-        return()=>{
-            console.log('user 값이 바뀌기전:');
-            console.log(users);
-        }
-    },[users]);
+    // useEffect(()=>{
+    //     console.log(users);
+    //     return()=>{
+    //         console.log('user 값이 바뀌기전:');
+    //         console.log(users);
+    //     }
+    // },[users]);
 
   return(
       <div>
