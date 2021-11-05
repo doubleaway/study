@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import InputSample  from "./inputSample";
+import UserList from "./userList";
 function App() {
   return (
-   <InputSample/>
+   <UserList/>
   );
 }
 
