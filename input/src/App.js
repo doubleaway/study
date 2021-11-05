@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import UserList from "./userList";
-import {useRef, useState} from "react";
+import {useMemo, useRef, useState} from "react";
 import CreateUser from "./createUser";
 //고유 아이디값을 관리하기 위해 useref사용
+
+function countActiveUsers(users){
+  console.log('활성 사용자 수를 세는 중...');
+  return users.filter(user=>user.active).length;
+}
+
 function App() {
   const nextId=useRef(4);
   const [inputs,setInputs]=useState({
@@ -83,6 +89,9 @@ const onToggle=id=>{
       active:false
     },
   ]);
+//하
+const count=useMemo(()=>countActiveUsers(users),[users]);
+
   return (
       <>
         <CreateUser
@@ -92,7 +101,9 @@ const onToggle=id=>{
             onCreate={onCreate}
         />
         <UserList users={users} onRemove={onRemove} onToggle={onToggle}/>
+        <div>활성사용자 수 : {count}</div>
         </>
+
   );
 }
 
