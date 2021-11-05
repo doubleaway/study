@@ -28,6 +28,7 @@ function App() {
     };
 
 
+
     //push,splice sort는 사용하면 안됨. #꼭 사용해야한다면 복사하여 사용
     //spread연산자 사용 방법
       // setUsers([...users,user]);
@@ -47,6 +48,11 @@ function App() {
     nextId.current+=1;
   }
 
+  //항목 삭제
+  //filter함수 사용
+  const onRemove=id=>{
+    setUsers(users.filter(user=>user.id!==id));
+  };
 
 
 
@@ -75,7 +81,7 @@ function App() {
             onChange={onChange}
             onCreate={onCreate}
         />
-        <UserList users={users}/>
+        <UserList users={users} onRemove={onRemove}/>
         </>
   );
 }
