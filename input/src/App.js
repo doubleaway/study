@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import UserList from "./userList";
-import {useMemo, useRef, useState} from "react";
+import {useCallback, useMemo, useRef, useState} from "react";
 import CreateUser from "./createUser";
 //고유 아이디값을 관리하기 위해 useref사용
 
@@ -17,21 +17,21 @@ function App() {
     email:'',
   });
   const {username,email}=inputs;
-  const onChange=e=>{
+  const onChange=useCallback(e=>{
     const {name,value}=e.target;
     setInputs({
       ...inputs,
       [name]:value
     })
-  }
+  },[inputs]);
 
   //항목을 추가 할 시
-  const onCreate=()=>{
+  const onCreate=useCallback(()=>{
     const user={
       id:nextId.current,
       username,
       email,
-    };
+    }
 
 
 
@@ -52,22 +52,22 @@ function App() {
     console.log(nextId.current);//4
     //함수 호출할때마다 1씩 더해주기.
     nextId.current+=1;
-  }
+  },[username,email,users]);
 
   //항목 삭제
   //filter함수 사용
-  const onRemove=id=>{
+  const onRemove=useCallback(id=>{
     setUsers(users.filter(user=>user.id!==id));
-  };
+  },users);
 
   //map의 다른 사용법 배열에 있는 특정아이템만 업데이트할때도 사용
-const onToggle=id=>{
+const onToggle=useCallback(id=>{
     setUsers(users.map(
         user=>user.id==id
         ?{...user,active:!user.active}
             :user
     ))
-}
+},[users])
 
   const [users,setUsers]=useState([
     {
@@ -89,7 +89,7 @@ const onToggle=id=>{
       active:false
     },
   ]);
-//하
+
 const count=useMemo(()=>countActiveUsers(users),[users]);
 
   return (

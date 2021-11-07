@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0916b24-b4a1-494c-a19e-d2613fb89442" name="Changes" comment="usecallback 함수의 재사용 최적화 준비">
+      <change beforePath="$PROJECT_DIR$/input/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/App.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="20OqydbyS4wzuZGpmDaXr2tupsN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0916b24-b4a1-494c-a19e-d2613fb89442" name="Changes" comment="" />
+      <created>1635926237234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635926237234</updated>
+      <workItem from="1635926238958" duration="782000" />
+      <workItem from="1636084191811" duration="7405000" />
+      <workItem from="1636091691050" duration="2838000" />
+    </task>
+    <task id="LOCAL-00001" summary="input 상태관리">
+      <created>1635926382309</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635926382310</updated>
+    </task>
+    <task id="LOCAL-00002" summary="함수형 컴포넌트의 useRef사용 법">
+      <created>1636084857793</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636084857793</updated>
+    </task>
+    <task id="LOCAL-00003" summary="배열 렌더링 하는법 3가지&#10;1. 일일히 렌더링하기 &#10;2. 다른 컴포넌트로 불러오기&#10;3. 내장함수 map사용하기">
+      <created>1636086151667</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636086151667</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ref의 다른 사용법&#10;특정돔을 선택하고 싶을때 사용할수도 있지만) 특정 변수를 계속 기억하고싶을때 (컴포넌트가 리렌더링 될때도 계속 기억됨)&#10;값이 바뀌어도 컴포넌트는 리렌더링 되지않음!">
+      <created>1636086957374</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636086957375</updated>
+    </task>
+    <task id="LOCAL-00005" summary="항목 추가&#10; - spread연산자 사용 or concat 함수 사용&#10; * push,splice sort는 사용하면 안됨. #꼭 사용해야한다면 복사하여 사용">
+      <created>1636087816346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636087816346</updated>
+    </task>
+    <task id="LOCAL-00006" summary="항목 삭제&#10;filter에 id값을 받아 사용">
+      <created>1636089194368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636089194368</updated>
+    </task>
+    <task id="LOCAL-00007" summary="항목 수정&#10;map함수 사용하여 특정아이템만 업데이트">
+      <created>1636089738064</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636089738064</updated>
+    </task>
+    <task id="LOCAL-00008" summary="useeffect사용">
+      <created>1636090752597</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636090752597</updated>
+    </task>
+    <task id="LOCAL-00009" summary="usememo사용">
+      <created>1636091480314</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636091480314</updated>
+    </task>
+    <task id="LOCAL-00010" summary="usememo사용">
+      <created>1636091709090</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1636091709090</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="input 상태관리" />
+    <MESSAGE value="함수형 컴포넌트의 useRef사용 법" />
+    <MESSAGE value="배열 렌더링 하는법 3가지&#10;1. 일일히 렌더링하기 &#10;2. 다른 컴포넌트로 불러오기&#10;3. 내장함수 map사용하기" />
+    <MESSAGE value="ref의 다른 사용법&#10;특정돔을 선택하고 싶을때 사용할수도 있지만) 특정 변수를 계속 기억하고싶을때 (컴포넌트가 리렌더링 될때도 계속 기억됨)&#10;값이 바뀌어도 컴포넌트는 리렌더링 되지않음!" />
+    <MESSAGE value="항목 추가&#10; - spread연산자 사용 or concat 함수 사용&#10; * push,splice sort는 사용하면 안됨. #꼭 사용해야한다면 복사하여 사용" />
+    <MESSAGE value="항목 삭제&#10;filter에 id값을 받아 사용" />
+    <MESSAGE value="항목 수정&#10;map함수 사용하여 특정아이템만 업데이트" />
+    <MESSAGE value="useeffect사용" />
+    <MESSAGE value="usememo사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="usememo사용" />
+  </component>
+</project>
