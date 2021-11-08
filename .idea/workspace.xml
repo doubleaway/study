@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0916b24-b4a1-494c-a19e-d2613fb89442" name="Changes" comment="usecallback 함수의 재사용 최적화 준비">
+    <list default="true" id="b0916b24-b4a1-494c-a19e-d2613fb89442" name="Changes" comment="React.memo를 사용한 리렌더링 최적화">
+      <change afterPath="$PROJECT_DIR$/input/src/Counter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/src/createUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/createUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/src/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/userList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
       <workItem from="1635926238958" duration="782000" />
       <workItem from="1636084191811" duration="7405000" />
       <workItem from="1636091691050" duration="2838000" />
-      <workItem from="1636339366288" duration="1908000" />
+      <workItem from="1636339366288" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="input 상태관리">
       <created>1635926382309</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636091709090</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="React.memo를 사용한 리렌더링 최적화">
+      <created>1636342087497</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636342087497</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +170,7 @@
     <MESSAGE value="항목 수정&#10;map함수 사용하여 특정아이템만 업데이트" />
     <MESSAGE value="useeffect사용" />
     <MESSAGE value="usememo사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="usememo사용" />
+    <MESSAGE value="React.memo를 사용한 리렌더링 최적화" />
+    <option name="LAST_COMMIT_MESSAGE" value="React.memo를 사용한 리렌더링 최적화" />
   </component>
 </project>
