@@ -11,6 +11,28 @@ function countActiveUsers(users){
 }
 
 function App() {
+
+  const [users,setUsers]=useState([
+    {
+      id:1,
+      username:'veloper',
+      email:'djfekjfkaeljfkejke@naver.com',
+      active:true
+    },
+    {
+      id:2,
+      username:'teste',
+      email:'fekjdkfjekj@naver.com',
+      active:false
+    },
+    {
+      id:3,
+      username:'simon',
+      email:'qlqp;oprewjf@naver.com',
+      active:false
+    },
+  ]);
+
   const nextId=useRef(4);
   const [inputs,setInputs]=useState({
     username:'',
@@ -39,7 +61,7 @@ function App() {
     //spread연산자 사용 방법
       // setUsers([...users,user]);
     //concat 함수 사용 방법
-    setUsers(users.concat(user));
+    setUsers(users=>users.concat(user));
 
 
     setInputs({
@@ -52,43 +74,24 @@ function App() {
     console.log(nextId.current);//4
     //함수 호출할때마다 1씩 더해주기.
     nextId.current+=1;
-  },[username,email,users]);
+  },[username,email]);
 
   //항목 삭제
   //filter함수 사용
   const onRemove=useCallback(id=>{
-    setUsers(users.filter(user=>user.id!==id));
+    setUsers(users=>users.filter(user=>user.id!==id));
   },users);
 
   //map의 다른 사용법 배열에 있는 특정아이템만 업데이트할때도 사용
 const onToggle=useCallback(id=>{
-    setUsers(users.map(
+    setUsers(users=>users.map(
         user=>user.id==id
         ?{...user,active:!user.active}
             :user
     ))
-},[users])
+},[])
 
-  const [users,setUsers]=useState([
-    {
-      id:1,
-      username:'veloper',
-      email:'djfekjfkaeljfkejke@naver.com',
-      active:true
-    },
-    {
-      id:2,
-      username:'teste',
-      email:'fekjdkfjekj@naver.com',
-      active:false
-    },
-    {
-      id:3,
-      username:'simon',
-      email:'qlqp;oprewjf@naver.com',
-      active:false
-    },
-  ]);
+
 
 const count=useMemo(()=>countActiveUsers(users),[users]);
 
