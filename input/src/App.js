@@ -3,6 +3,7 @@ import './App.css';
 import UserList from "./userList";
 import {useCallback, useReducer,useMemo, useRef, useState} from "react";
 import CreateUser from "./createUser";
+import useInputs from "./UseInputs";
 //고유 아이디값을 관리하기 위해 useref사용
 
 function countActiveUsers(users){
@@ -10,10 +11,7 @@ function countActiveUsers(users){
   return users.filter(user=>user.active).length;
 }
 const initialState={
-  inputs:{
-    username:'',
-    email:''
-  },
+
   users:[  {
     id:1,
     username:'veloper',
@@ -36,14 +34,7 @@ const initialState={
 
 function reducer(state,action){
   switch (action.type){
-    case 'CHANGE_INPUT':
-      return {
-        ...state,
-        inputs:{
-          ...state.inputs,
-          [action.name]:action.value
-        }
-      }
+
     case 'CREATE_USER':
       return {
         inputs:initialState.inputs,
@@ -68,18 +59,15 @@ function reducer(state,action){
 }
 function App() {
 const [state, dispatch]=useReducer(reducer , initialState);
+const [form, onChange, reset]=useInputs({
+  username: '',
+  email: ''
+});
+const {username,email}=form;
 const nextId=useRef(4);
 const { users }=state;
-const {username,email}=state.inputs;
 
-const onChange=useCallback(e=>{
-  const {name,value}=e.target;
-  dispatch({
-    type:'CHANGE_INPUT',
-    name,
-    value
-  });
-},[]);
+
 
 const onCreate = useCallback(()=>{
   dispatch({
@@ -91,8 +79,8 @@ const onCreate = useCallback(()=>{
     }
   });
   nextId.current+=1;
-
-},[email]);
+  reset();
+},[username,email,reset]);
 
 const onToggle=useCallback((id)=>{
   dispatch({
