@@ -4,7 +4,12 @@ import UserList from "./userList";
 import {useCallback, useReducer,useMemo, useRef, useState,createContext} from "react";
 import CreateUser from "./createUser";
 import useInputs from "./UseInputs";
+import produce from "immer";
+import {act} from "react-dom/test-utils";
 //고유 아이디값을 관리하기 위해 useref사용
+
+//console.창에서 immer사용
+// window.produce=produce;
 
 function countActiveUsers(users){
   console.log('활성 사용자 수를 세는 중...');
@@ -36,22 +41,35 @@ function reducer(state,action){
   switch (action.type){
 
     case 'CREATE_USER':
-      return {
-        inputs:initialState.inputs,
-        users:state.users.concat(action.user)
-      }
+      return
+        //   inputs:initialState.inputs,
+        //   users:state.users.concat(action.user)
+        //
+       produce((state,draft)=>{
+          draft.user.push(action.user);
+        });
+
     case 'TOGGLE_USER':
-      return{
-        ...state,
-          users:state.users.map(user=>user.id===action.id?{
-            ...user,active:!user.active}:user
-      )
-    }
+      return produce((state,draft)=>{
+        const user=draft.users.find(user=>user.id===action.id);
+        user.active=!user.active;
+      })
+
+    //   return{
+    //     ...state,
+    //       users:state.users.map(user=>user.id===action.id?{
+    //         ...user,active:!user.active}:user
+    //   )
+    // }
     case 'REMOVE_USER':
-      return{
-        ...state,
-        users:state.users.filter(user=>user.id!==action.id)
-      }
+      // return{
+      //   ...state,
+      //   users:state.users.filter(user=>user.id!==action.id)
+      // }
+          return produce(state,draft=>{
+            const index=draft.users.findIndex(user=>user.id===action.id);
+            draft.users.splice(index,1);
+          })
     default:
       throw new Error('Unhandled action');
   }

@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0916b24-b4a1-494c-a19e-d2613fb89442" name="Changes" comment="context api를 사용하여 자식이 부모를 거쳐 넘겨받는 것이아니라 값을 넘겨주는 해당 컴포넌트에서 받을 수 있게">
-      <change afterPath="$PROJECT_DIR$/input/src/ContextSample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input/src/useInputs_homework.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/src/UseInputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/UseInputs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/input/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <workItem from="1636525677290" duration="80000" />
       <workItem from="1636526806465" duration="992000" />
       <workItem from="1636528094018" duration="2940000" />
-      <workItem from="1636595094935" duration="3288000" />
+      <workItem from="1636595094935" duration="4555000" />
     </task>
     <task id="LOCAL-00001" summary="input 상태관리">
       <created>1635926382309</created>
@@ -170,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636518494981</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="context api를 사용하여 자식이 부모를 거쳐 넘겨받는 것이아니라 값을 넘겨주는 해당 컴포넌트에서 받을 수 있게">
+      <created>1636598680110</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1636598680110</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
